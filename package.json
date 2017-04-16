@@ -1,1 +1,39 @@
-{     "devDependencies": {         "json-stringify-safe": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-json-stringify-safe",     "homepage": "https://github.com/npmdoc/node-npmdoc-json-stringify-safe",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-json-stringify-safe.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "api documentation for [json-stringify-safe (v5.0.1)](https://github.com/isaacs/json-stringify-safe) [![npm package](https://img.shields.io/npm/v/npmdoc-json-stringify-safe.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-json-stringify-safe) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-json-stringify-safe.svg)](https://travis-ci.org/npmdoc/node-npmdoc-json-stringify-safe)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "json-stringify-safe": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-json-stringify-safe",
+    "keywords": [
+        "documentation",
+        "json-stringify-safe"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_json_stringify_safe.js",
+    "name": "npmdoc-json-stringify-safe",
+    "nameAlias": "npmdoc_json_stringify_safe",
+    "nameOriginal": "npmdoc-json-stringify-safe",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-json-stringify-safe.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.2"
+}
